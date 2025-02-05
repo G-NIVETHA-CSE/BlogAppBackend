@@ -4,14 +4,10 @@ const bcrypt = require('bcrypt');
 const cors = require('cors');
 const app = express();
 
-app.use(cors({
-  origin: 'http://localhost:3000',
-  credentials: true
-}));
-
+app.use(cors());
 app.use(express.json());
 
-mongoose.connect('mongodb+srv://nivethag2023cse:nivi1234@nivetha-g.srmli.mongodb.net/', {
+mongoose.connect('mongodb+srv://nivethag2023cse:nivi1234@nivetha-g.srmli.mongodb.net/test', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 }).then(() => console.log('Connected to MongoDB'))
